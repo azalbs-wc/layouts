@@ -1,6 +1,6 @@
 import { html, LitElement, PropertyValueMap } from 'lit';
 import { property } from 'lit/decorators/property.js';
-import { asWebMeasurement } from '../helpers';
+import { measurementUnit } from '../helpers';
 import { flexAlignment } from '../mixins/flex';
 
 export class FlexBox extends flexAlignment(LitElement) {
@@ -53,17 +53,11 @@ export class FlexBox extends flexAlignment(LitElement) {
     this.style.alignItems = this.alignment ?? undefined;
     this.style.alignContent = this.contentAlignment ?? undefined;
     this.style.flexShrink = this.shrink ? `${this.shrink}` : '';
-    this.style.width = asWebMeasurement(this.width);
-    this.style.height = asWebMeasurement(this.height);
+    this.style.width = measurementUnit(this.width);
+    this.style.height = measurementUnit(this.height);
     super.update(changedProperties);
   }
   override render() {
     return html` <slot></slot> `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-flex': FlexBox;
   }
 }

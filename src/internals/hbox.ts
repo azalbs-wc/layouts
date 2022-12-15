@@ -3,13 +3,12 @@ import { boxMixin } from '../mixins/box';
 import { flexAlignment } from '../mixins/flex';
 
 export class HBoxLayout extends boxMixin(flexAlignment(LitElement)) {
-
   //
   override connectedCallback(): void {
     this.setStyleProperties(HBoxLayout.elementProperties.keys());
     super.connectedCallback();
   }
-  
+
   //
   protected override update(
     changedProperties: PropertyValueMap<any> | Map<PropertyKey, unknown>
@@ -34,10 +33,3 @@ export class HBoxLayout extends boxMixin(flexAlignment(LitElement)) {
     return html`<slot></slot>`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-hbox': HBoxLayout;
-  }
-}
-

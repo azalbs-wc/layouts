@@ -27,9 +27,3 @@ export class BoxLayout extends boxMixin(LitElement) {
     return html`<slot></slot>`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-box': BoxLayout;
-  }
-}

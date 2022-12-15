@@ -33,9 +33,3 @@ export class VBoxLayout extends boxMixin(flexAlignment(LitElement)) {
     return html`<slot></slot>`;
   }
 }
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-vbox': VBoxLayout;
-  }
-}

@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import '../flex';
+import './flex';
 
 export class Center extends LitElement {
   static override get styles() {
@@ -16,11 +16,5 @@ export class Center extends LitElement {
         <slot></slot>
       </azl-flex>
     `;
-  }
-}
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-center': Center;
   }
 }

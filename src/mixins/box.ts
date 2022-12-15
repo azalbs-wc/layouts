@@ -1,6 +1,6 @@
 import { ReactiveElement } from 'lit';
 import { property } from 'lit/decorators/property.js';
-import { asWebMeasurement } from '../helpers';
+import { measurementUnit } from '../helpers';
 import { Constructor } from './base';
 
 /**
@@ -282,7 +282,7 @@ export const boxMixin = <T extends Constructor<ReactiveElement>>(
 
     getPropertyValue(key: keyof this) {
       return BoxMeasurement.properties.indexOf(key as string) !== -1
-        ? asWebMeasurement(this[key])
+        ? measurementUnit(this[key])
         : (this[key] as string);
     }
 
@@ -303,8 +303,10 @@ export const boxMixin = <T extends Constructor<ReactiveElement>>(
         });
     }
 
+    /** @internal */
     protected setBoxProperties() {}
 
+    /** @internal */
     protected exceptProperties(): string[] {
       return [];
     }
