@@ -1,3 +1,4 @@
+import { registerElement } from './internals/helpers.js';
 import { VBoxLayout } from './internals/vbox.js';
 
 declare global {
@@ -6,4 +7,4 @@ declare global {
   }
 }
 
-window.customElements.define('azl-vbox', VBoxLayout);
+registerElement('azl-vbox', VBoxLayout);
