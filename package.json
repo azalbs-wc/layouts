@@ -8,8 +8,11 @@
   "module": "dist/src/index.js",
   "exports": {
     ".": "./dist/src/index.js",
-    "./containers": "./dist/src/containers.js",
-    "./center": "./dist/src/containers.js"
+    "./azl-box.js": "./dist/src/azl-box.js",
+    "./azl-hbox.js": "./dist/src/azl-hbox.js",
+    "./azl-vbox.js": "./dist/src/azl-vbox.js",
+    "./azl-center.js": "./dist/src/azl-center.js",
+    "./azl-flex.js": "./dist/src/azl-flex.js"
   },
   "scripts": {
     "analyze": "cem analyze --litelement",
@@ -24,14 +27,14 @@
     "storybook:build": "tsc && npm run analyze -- --exclude dist && build-storybook"
   },
   "dependencies": {
-    "lit": "^2.0.2"
+    "lit": "^2.4.0"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^8.0.2",
     "@open-wc/testing": "^3.1.6",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
     "@web/dev-server": "^0.1.34",
     "@web/dev-server-storybook": "^0.5.4",
     "@web/test-runner": "^0.14.0",
@@ -44,7 +47,6 @@
     "tslib": "^2.3.1",
     "typescript": "^4.5.2"
   },
-  "customElements": "custom-elements.json",
   "eslintConfig": {
     "parser": "@typescript-eslint/parser",
     "extends": [
@@ -83,5 +85,6 @@
       "eslint --fix",
       "prettier --write"
     ]
-  }
+  },
+  "customElements": "custom-elements.json"
 }

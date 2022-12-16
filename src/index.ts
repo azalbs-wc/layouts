@@ -1,4 +1,5 @@
-export { BoxLayout } from './internals/box';
-export { FlexBox } from './internals/flex';
-export { HBoxLayout } from './internals/hbox';
-export { VBoxLayout } from './internals/vbox';
+export { BoxLayout } from './internals/box.js';
+export { Center } from './internals/center.js';
+export { FlexBoxLayout } from './internals/flex.js';
+export { HBoxLayout } from './internals/hbox.js';
+export { VBoxLayout } from './internals/vbox.js';

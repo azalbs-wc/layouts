@@ -1,70 +1,86 @@
 import { ReactiveElement } from 'lit';
+/** @typescript-eslint/no-unused-vars */
 import { property } from 'lit/decorators/property.js';
-import { Constructor } from './base';
+import { Constructor } from './base.js';
+import {
+  ItemsAlignmentType,
+  JustifyContentType,
+  JustifyItemsType,
+  JustifySelfType,
+  SelfAlignmentType,
+} from './types.js';
 
-type FlexAlignmentType = {
+export interface FlexElementType {
   /**
-   * @attr alignment
+   * @attr align-self
    */
-  alignment: 'stretch' | 'baseline' | 'center' | 'flex-start' | 'flex-end';
+  alignment: SelfAlignmentType;
+
+  /**
+   * @attr align-items
+   */
+  alignItems: ItemsAlignmentType;
   /**
    * @attr align-content
    */
-  contentAlignment:
-    | 'stretch'
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'space-around'
-    | 'space-between';
+  alignContent: ItemsAlignmentType;
 
   /**
-   * @attr justify
+   * @attr justify-self
    */
-  justify:
-    | 'center'
-    | 'flex-start'
-    | 'flex-end'
-    | 'space-around'
-    | 'space-between';
-};
+  justify: JustifySelfType;
+
+  /**
+   * @attr justify-content
+   */
+  justifyContent: JustifyContentType;
+  /**
+   * @attr justify-items
+   */
+  justifyItems: JustifyItemsType;
+}
 
 export const flexAlignment = <T extends Constructor<ReactiveElement>>(
   baseClass: T
 ) => {
   class AlignmentClass extends baseClass {
     /**
-     * How element are position on the cross-axis
-     *
-     * @attr alignment
-     */
-    @property({ type: String, attribute: 'alignment' })
-    alignment!: 'stretch' | 'baseline' | 'center' | 'flex-start' | 'flex-end';
-
-    /**
      * How element are position on the main-axis
      *
      * @attr justify
      */
     @property({ type: String, attribute: 'justify' })
-    justify!:
-      | 'center'
-      | 'flex-start'
-      | 'flex-end'
-      | 'space-around'
-      | 'space-between';
+    justify!: JustifySelfType;
+
+    /**
+     * @attr justify-content
+     */
+    @property({ type: String, attribute: 'justify-content' })
+    justifyContent!: JustifyContentType;
+
+    /**
+     * @attr justify-items
+     */
+    @property({ type: String, attribute: 'justify-items' })
+    justifyItems!: JustifyItemsType;
+
+    /**
+     * @attr align-self
+     */
+    @property({ type: String, attribute: 'align-self' })
+    alignment!: SelfAlignmentType;
+
+    /**
+     * @attr align-items
+     */
+    @property({ type: String, attribute: 'align-items' })
+    alignItems!: ItemsAlignmentType;
 
     /**
      * @attr align-content
      */
     @property({ type: String, attribute: 'align-content' })
-    contentAlignment!:
-      | 'stretch'
-      | 'center'
-      | 'flex-start'
-      | 'flex-end'
-      | 'space-around'
-      | 'space-between';
+    alignContent!: ItemsAlignmentType;
   }
-  return AlignmentClass as Constructor<FlexAlignmentType> & T;
+  return AlignmentClass as Constructor<FlexElementType> & T;
 };

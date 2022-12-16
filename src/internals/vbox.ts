@@ -2,6 +2,7 @@ import { html, LitElement, PropertyValueMap } from 'lit';
 import { boxMixin } from '../mixins/box.js';
 import { flexAlignment } from '../mixins/flex.js';
 
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["exceptProperties", "render"] }] */
 export class VBoxLayout extends boxMixin(flexAlignment(LitElement)) {
   //
   override connectedCallback(): void {
@@ -20,13 +21,23 @@ export class VBoxLayout extends boxMixin(flexAlignment(LitElement)) {
   protected override setBoxProperties() {
     this.style.display = 'flex';
     this.style.flexDirection = 'column';
-    this.style.justifyContent = this.justify ?? undefined;
-    this.style.alignItems = this.alignment ?? undefined;
-    this.style.alignContent = this.contentAlignment ?? undefined;
+    this.style.justifyContent = this.justifyContent ?? undefined;
+    this.style.justifyItems = this.justifyItems ?? undefined;
+    this.style.justifySelf = this.justify ?? undefined;
+    this.style.alignItems = this.alignItems ?? undefined;
+    this.style.alignContent = this.alignContent ?? undefined;
+    this.style.alignSelf = this.alignment ?? undefined;
   }
 
-  protected override exceptProperties(): string[] {
-    return ['justify', 'alignment', 'contentAlignment'];
+  protected exceptProperties(): string[] {
+    return [
+      'justify',
+      'justifyContent',
+      'justifyItems',
+      'alignment',
+      'itemsAlignment',
+      'contentAlignment',
+    ];
   }
 
   override render() {

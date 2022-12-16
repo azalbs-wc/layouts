@@ -1,18 +1,14 @@
 import { html, LitElement } from 'lit';
-import './flex';
+import { queryAssignedElements } from 'lit/decorators/query-assigned-elements.js';
+import '../azl-flex.js';
 
 export class Center extends LitElement {
-  static override get styles() {
-    return [];
-  }
-
-  constructor() {
-    super();
-  }
+  @queryAssignedElements()
+  public projectedElements!: Array<HTMLElement>;
 
   override render() {
     return html`
-      <azl-flex justify="center" alignment="center">
+      <azl-flex justify-content="center" align-items="center">
         <slot></slot>
       </azl-flex>
     `;
