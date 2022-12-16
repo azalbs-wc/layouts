@@ -9,7 +9,9 @@ describe('azl-center', () => {
     const el = await fixture<Center>(html`<azl-center>
       <p>Hello World!</p>
     </azl-center>`);
-    const flexbox = el.shadowRoot?.querySelector('azl-flex') as FlexBoxLayout;
+    const flexbox = el.shadowRoot?.querySelector(
+      'azl-flex'
+    ) as any as FlexBoxLayout;
     expect(getComputedStyle(flexbox).justifyContent).to.equal('center');
     expect(getComputedStyle(flexbox).alignItems).to.equal('center');
   });

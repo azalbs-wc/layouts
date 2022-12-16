@@ -1,31 +1,10 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "target": "es2018",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmitOnError": true,
-    "lib": [
-      "es2017",
-      "dom"
-    ],
-    "strict": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
     "outDir": "dist",
-    "sourceMap": true,
-    "inlineSources": true,
-    // match output dir to input dir. e.g. dist/index instead of dist/src/index
     "rootDir": "./src",
     "declaration": true,
-    "incremental": true,
-    // Directory where typescript output declaration files
-    "declarationDir": "./dist/types",
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true
+    "declarationDir": "dist/types"
   },
-  "include": [
-    "src",
-  ]
+  "include": ["src/**/*.ts"]
 }
