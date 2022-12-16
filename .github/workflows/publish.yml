@@ -6,7 +6,7 @@ name: Test @azlabs-wc/layouts components
 on:
   push:
     tags:
-      - "v[0-9]+.[0-9]+.[0-9]+"
+      - 'v[0-9]+.[0-9]+.[0-9]+'
 
 jobs:
   publish-gpr:
@@ -29,6 +29,9 @@ jobs:
         uses: bahmutov/npm-install@v1
         with:
           useLockFile: false
+
+      - name: Build
+        run: npm run build
 
       - run: npm publish --access public
     env:
