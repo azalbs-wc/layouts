@@ -29,8 +29,8 @@ jobs:
         with:
           useLockFile: false
 
-      - name: Build
-        run: npm run build
+      - name: Lint
+        run: npm run lint
 
       - run: npm publish --access public
     env:
