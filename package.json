@@ -4,15 +4,15 @@
   "license": "MIT",
   "author": "Azandrew Sidoine <azandrewdevelopper@gmail.com>",
   "version": "0.1.5",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "exports": {
-    ".": "./dist/src/index.js",
-    "./azl-box.js": "./dist/src/azl-box.js",
-    "./azl-hbox.js": "./dist/src/azl-hbox.js",
-    "./azl-vbox.js": "./dist/src/azl-vbox.js",
-    "./azl-center.js": "./dist/src/azl-center.js",
-    "./azl-flex.js": "./dist/src/azl-flex.js"
+    ".": "./dist/index.js",
+    "./azl-box.js": "./dist/azl-box.js",
+    "./azl-hbox.js": "./dist/azl-hbox.js",
+    "./azl-vbox.js": "./dist/azl-vbox.js",
+    "./azl-center.js": "./dist/azl-center.js",
+    "./azl-flex.js": "./dist/azl-flex.js"
   },
   "files": [
     "dist/**/*"
