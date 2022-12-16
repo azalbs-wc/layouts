@@ -1,6 +1,6 @@
 {
-  "name": "@azlabsjs/wc-layouts",
-  "description": "Webcomponent azl-layout following open-wc recommendations",
+  "name": "@azlabs-wc/layouts",
+  "description": "UI layout components library",
   "license": "MIT",
   "author": "Azandrew Sidoine <azandrewdevelopper@gmail.com>",
   "version": "0.1.1",
