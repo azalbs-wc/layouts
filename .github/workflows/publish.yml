@@ -29,14 +29,11 @@ jobs:
         with:
           useLockFile: false
 
-      - name: Lint
-        run: npm run lint
-
       - name: Build
         run: npm run build
 
-      - name: Print dist folder contents
-        run: ls -la ./dist
+      - name: Lint
+        run: npm run lint
 
       - run: cd ./dist && npm publish --access public
     env:
