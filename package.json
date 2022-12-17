@@ -20,7 +20,7 @@
     "./azl-center": "./azl-center.js"
   },
   "files": [
-    "dist/**/*"
+    "*"
   ],
   "scripts": {
     "analyze": "cem analyze --litelement",
