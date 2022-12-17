@@ -1,8 +1,8 @@
 import { expect, fixture, fixtureCleanup } from '@open-wc/testing';
 import { html } from 'lit';
 import '../src/azl-center.js';
-import { Center } from '../src/internals/center.js';
-import { FlexBoxLayout } from '../src/internals/flex.js';
+import { Center } from '../src/lib/center.js';
+import { FlexBoxLayout } from '../src/lib/flex.js';
 
 describe('azl-center', () => {
   it('should have a flexbox element with justify-content and align-item equals center', async () => {

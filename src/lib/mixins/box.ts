@@ -1,8 +1,8 @@
 import { ReactiveElement } from 'lit';
 import { property } from 'lit/decorators/property.js';
-import { measurementUnit } from '../internals/helpers.js';
+import { BoxAbstractClass } from './abstract-box.js';
 import { Constructor } from './base.js';
-import { BoxAbstractClass } from './box-internals.js';
+import { measurementUnit } from './helpers.js';
 import { BoxMeasurement } from './units.js';
 
 /**

@@ -1,6 +1,6 @@
-import { html, LitElement, PropertyValueMap } from 'lit';
-import { boxMixin } from '../mixins/box.js';
-import { flexAlignment } from '../mixins/flex.js';
+import { LitElement, PropertyValueMap, html } from 'lit';
+import { boxMixin } from './mixins/box.js';
+import { flexAlignment } from './mixins/flex.js';
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["exceptProperties", "render"] }] */
 export class HBoxLayout extends boxMixin(flexAlignment(LitElement)) {

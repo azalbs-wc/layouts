@@ -4,15 +4,16 @@
   "license": "MIT",
   "author": "Azandrew Sidoine <azandrewdevelopper@gmail.com>",
   "version": "0.1.9",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "index.js",
+  "module": "index.js",
+  "typings": "index.d.ts",
   "exports": {
-    ".": "./dist/index.js",
-    "./azl-box.js": "./dist/azl-box.js",
-    "./azl-hbox.js": "./dist/azl-hbox.js",
-    "./azl-vbox.js": "./dist/azl-vbox.js",
-    "./azl-center.js": "./dist/azl-center.js",
-    "./azl-flex.js": "./dist/azl-flex.js"
+    ".": "./index.js",
+    "./azl-box.js": "./azl-box.js",
+    "./azl-hbox.js": "./azl-hbox.js",
+    "./azl-vbox.js": "./azl-vbox.js",
+    "./azl-center.js": "./azl-center.js",
+    "./azl-flex.js": "./azl-flex.js"
   },
   "files": [
     "dist/**/*"
@@ -20,7 +21,7 @@
   "scripts": {
     "analyze": "cem analyze --litelement",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
-    "build": "tsc && npm run analyze -- --exclude dist",
+    "build": "rimraf tsconfig.tsbuildinfo && rimraf dist && tsc && npm run analyze -- --exclude dist",
     "prepublish": "tsc && npm run analyze -- --exclude dist",
     "lint": "eslint --ext .ts,.html .  --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore --end-of-line auto",
     "format": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",

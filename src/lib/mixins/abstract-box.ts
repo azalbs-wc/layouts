@@ -1,3 +1,9 @@
+/**
+ * Base class for Box Layout components. Provides
+ * contracts that must be implemented by inherited classes
+ *
+ * @internal
+ */
 export declare abstract class BoxAbstractClass {
   /**
    * Set the box default properties

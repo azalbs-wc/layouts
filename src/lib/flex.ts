@@ -1,7 +1,7 @@
-import { html, LitElement, PropertyValueMap } from 'lit';
+import { LitElement, PropertyValueMap, html } from 'lit';
 import { property } from 'lit/decorators/property.js';
-import { flexAlignment } from '../mixins/flex.js';
-import { measurementUnit } from './helpers.js';
+import { flexAlignment } from './mixins/flex.js';
+import { measurementUnit } from './mixins/helpers.js';
 
 export class FlexBoxLayout extends flexAlignment(LitElement) {
   /**

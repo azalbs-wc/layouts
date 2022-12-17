@@ -1,5 +1,5 @@
-import { html, LitElement, PropertyValueMap } from 'lit';
-import { boxMixin } from '../mixins/box.js';
+import { LitElement, PropertyValueMap, html } from 'lit';
+import { boxMixin } from './mixins/box.js';
 
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["exceptProperties", "render"] }] */
 export class BoxLayout extends boxMixin(LitElement) {

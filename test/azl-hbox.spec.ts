@@ -6,7 +6,7 @@ import {
 } from '@open-wc/testing';
 import { html } from 'lit';
 import '../src/azl-hbox.js';
-import { HBoxLayout } from '../src/internals/hbox.js';
+import { HBoxLayout } from '../src/lib/hbox.js';
 
 describe('azl-hbox', () => {
   it('has flex direction property set to row', async () => {

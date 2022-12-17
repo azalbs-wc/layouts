@@ -6,7 +6,7 @@ import {
 } from '@open-wc/testing';
 import { html } from 'lit';
 import '../src/azl-flex.js';
-import { FlexBoxLayout } from '../src/internals/flex.js';
+import { FlexBoxLayout } from '../src/lib/flex.js';
 
 describe('azl-flex', () => {
   it('has default display equals to flex and flex-wrap to wrap', async () => {

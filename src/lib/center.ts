@@ -1,6 +1,6 @@
-import { html, LitElement } from 'lit';
+import { LitElement, html } from 'lit';
 import { queryAssignedElements } from 'lit/decorators/query-assigned-elements.js';
-import '../azl-flex.js';
+import './azl-flex.js';
 
 export class Center extends LitElement {
   @queryAssignedElements()

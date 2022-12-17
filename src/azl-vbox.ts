@@ -1,10 +1,4 @@
-import { registerElement } from './internals/helpers.js';
-import { VBoxLayout } from './internals/vbox.js';
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-vbox': VBoxLayout;
-  }
-}
+import { registerElement } from './lib/helpers.js';
+import { VBoxLayout } from './lib/vbox.js';
 
 registerElement('azl-vbox', VBoxLayout);

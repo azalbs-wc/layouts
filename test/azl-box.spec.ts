@@ -6,7 +6,7 @@ import {
 } from '@open-wc/testing';
 import { html } from 'lit';
 import '../src/azl-box.js';
-import { BoxLayout } from '../src/internals/box.js';
+import { BoxLayout } from '../src/lib/box.js';
 
 describe('azl-box', () => {
   it('has display equals to block by default', async () => {

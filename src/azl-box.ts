@@ -1,10 +1,4 @@
-import { BoxLayout } from './internals/box.js';
-import { registerElement } from './internals/helpers.js';
-
-declare global {
-  interface HTMLElementTagNameMap {
-    'azl-box': BoxLayout;
-  }
-}
+import { BoxLayout } from './lib/box.js';
+import { registerElement } from './lib/helpers.js';
 
 registerElement('azl-box', BoxLayout);

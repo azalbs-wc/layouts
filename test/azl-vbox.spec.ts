@@ -6,7 +6,7 @@ import {
 } from '@open-wc/testing';
 import { html } from 'lit';
 import '../src/azl-vbox.js';
-import { VBoxLayout } from '../src/internals/vbox.js';
+import { VBoxLayout } from '../src/lib/vbox.js';
 
 describe('azl-vbox', () => {
   it('has flex direction property set to column', async () => {
