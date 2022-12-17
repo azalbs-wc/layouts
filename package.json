@@ -10,10 +10,14 @@
   "exports": {
     ".": "./index.js",
     "./azl-box.js": "./azl-box.js",
+    "./azl-box": "./azl-box.js",
     "./azl-hbox.js": "./azl-hbox.js",
+    "./azl-hbox": "./azl-hbox.js",
     "./azl-vbox.js": "./azl-vbox.js",
+    "./azl-vbox": "./azl-vbox.js",
     "./azl-center.js": "./azl-center.js",
-    "./azl-flex.js": "./azl-flex.js"
+    "./azl-flex.js": "./azl-flex.js",
+    "./azl-center": "./azl-center.js"
   },
   "files": [
     "dist/**/*"

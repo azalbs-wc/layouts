@@ -54,9 +54,9 @@ export class FlexBoxLayout extends flexAlignment(LitElement) {
 
   private setRequiredStylesProperties() {
     this.style.display = 'flex';
-    this.style.flexGrow = this.grow ? String(this.grow) : '';
+    this.style.flexGrow = this.grow ? this.grow.toString() : '';
     this.style.flexDirection = this.direction;
-    this.style.flexWrap = Boolean(this.wrap) !== false ? 'wrap' : 'no-wrap';
+    this.style.flexWrap = this.wrap ? 'wrap' : 'no-wrap';
     this.style.flexShrink = this.shrink ? `${this.shrink}` : '';
     this.style.justifyContent = this.justifyContent ?? undefined;
     this.style.justifyItems = this.justifyItems ?? undefined;
@@ -64,12 +64,8 @@ export class FlexBoxLayout extends flexAlignment(LitElement) {
     this.style.alignItems = this.alignItems ?? undefined;
     this.style.alignContent = this.alignContent ?? undefined;
     this.style.alignSelf = this.alignment ?? undefined;
-    if (this.width) {
-      this.style.width = measurementUnit(this.width);
-    }
-    if (this.width) {
-      this.style.height = measurementUnit(this.height);
-    }
+    this.style.width = this.width ? measurementUnit(this.width) : '';
+    this.style.height = this.height ? measurementUnit(this.height) : '';
   }
 
   override render() {
