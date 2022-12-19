@@ -3,6 +3,7 @@ import { ReactiveElement } from 'lit';
 import { property } from 'lit/decorators/property.js';
 import { Constructor } from './base.js';
 import {
+  ContentAlignmentType,
   ItemsAlignmentType,
   JustifyContentType,
   JustifyItemsType,
@@ -80,7 +81,7 @@ export const flexAlignment = <T extends Constructor<ReactiveElement>>(
      * @attr align-content
      */
     @property({ type: String, attribute: 'align-content' })
-    alignContent!: ItemsAlignmentType;
+    alignContent!: ContentAlignmentType;
   }
   return AlignmentClass as Constructor<FlexElementType> & T;
 };
