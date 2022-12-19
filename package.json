@@ -3,7 +3,7 @@
   "description": "UI layout web components library",
   "license": "MIT",
   "author": "Azandrew Sidoine <azandrewdevelopper@gmail.com>",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "main": "index.js",
   "module": "index.js",
   "typings": "index.d.ts",
